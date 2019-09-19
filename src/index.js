@@ -16,12 +16,12 @@ const Container = styled.main`
 `;
 
 const FakeLoader = props => {
-  const [isTimedOut, setTimedOut] = useState(false);
+  const [isLoading, setLoading] = useState(false);
   useEffect(() => {
-    const id = setTimeout(() => setTimedOut(true), 10000);
+    const id = setTimeout(() => setLoading(true), 1000);
     return () => clearTimeout(id);
   }, []);
-  return isTimedOut ? (
+  return isLoading ? (
     props.children
   ) : (
     <>
