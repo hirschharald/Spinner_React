@@ -32,7 +32,7 @@ const FakeLoader = props => {
 };
 
 function App() {
-  const [restartFlag, setRestartFlag] = React.useState(false);
+  const [restartFlag, setRestartFlag] = useState(false);
   return (
     <Container key={restartFlag}>
       <FakeLoader loadingText="loading ...">
