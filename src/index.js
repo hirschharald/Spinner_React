@@ -21,6 +21,7 @@ const FakeLoader = props => {
     const id = setTimeout(() => setLoading(true), 1000);
     return () => clearTimeout(id);
   }, []);
+  //
   return isLoading ? (
     props.children
   ) : (
